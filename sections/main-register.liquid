@@ -101,19 +101,6 @@
         {{ 'customer.register.email' | t }}
       </label>
     </div>
-      <div class="field">
-        <input
-        type="text"
-        name="customer[phone]"
-        id="RegisterForm-phone"
-        {% if form.phone %}value="{{ form.phone }}"{% endif %}
-        autocomplete="family-name"
-        placeholder="Phone Number"
-        >
-        <label for="RegisterForm-phone">
-        Phone Number
-        </label>
-      </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
         <svg aria-hidden="true" focusable="false">

@@ -101,9 +101,18 @@
         {{ 'customer.register.email' | t }}
       </label>
     </div>
-      <div id="phone_number" class="clearfix large_form">
-        <label for="phone_number" class="login">Phone Number</label>
-        <input type="phone_number" class="form-control" name="customer[phone_number]" id="phone_number" class="large" size="30" />
+      <div class="field">
+        <input
+        type="text"
+        name="customer[phone]"
+        id="RegisterForm-phone"
+        {% if form.phone %}value="{{ form.phone }}"{% endif %}
+        autocomplete="family-name"
+        placeholder="Phone Number"
+        >
+        <label for="RegisterForm-phone">
+        Phone Number
+        </label>
       </div>
     {%- if form.errors contains 'email' -%}
       <span id="RegisterForm-email-error" class="form__message">
